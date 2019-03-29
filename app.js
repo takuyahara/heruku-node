@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const server = app.listen(3000, () => {
+const server = app.listen(process.env.PORT, () => {
   console.log("Node.js is listening to PORT:" + server.address().port);
 });
 app.get('/api/sonarcloud', function(req, res) {
